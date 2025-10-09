@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>K8s Test App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Kubernetes Test Application</h1>
+        <p>Successfully built Docker image!</p>
+        <p>Container is working perfectly!</p>
+        
+        <form method="POST">
+            <input type="text" name="name" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+        
+        {% if message %}
+            <div class="message">{{ message }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
